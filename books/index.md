@@ -3,8 +3,10 @@ layout: page
 title: List of books
 permalink: /books/
 ---
+### Currently Reading
+- Never split the difference | Criss Voss
 
-### Non fiction
-- surrounded by idiots
-- 7 Habbits of..
-- 12 lessons 
+#### List of books I've read.
+- Surrounded by Idiots | By Thomas Erikson
+- 7 Habbits of highly effective people | Steven Covey
+- 12 rules of life | Jordan Peterson
