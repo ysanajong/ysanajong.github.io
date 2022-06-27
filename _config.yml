@@ -28,8 +28,8 @@ twitter_username: yannicksanajong
 github_username:  ysanajong
 
 # Build settings
-# theme: minima
-theme: jekyll-theme-cayman
+theme: minima
+# theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
 
