@@ -21,11 +21,15 @@
 title: Yannick San-A-Jong
 email: yannick@sanajong.net
 description: >- # this means to ignore newlines until "baseurl:"
-  Yannick's blog
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter: yannicksanajong
-github_username:  ysanajong
+github:  ysanajong
+linkedin: yannicksanajong
+goodreads: ysan
+youtube: yannicksanajong
+instagram: ysanajong
 
 # Build settings
 theme: minima
