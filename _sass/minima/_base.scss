@@ -9,7 +9,6 @@ dl, dd, ol, ul, figure {
 }
 
 
-
 /**
  * Basic styling
  */
@@ -28,7 +27,19 @@ body {
   flex-direction: column;
 }
 
-
+.darkmode {
+  
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  color: whitesmoke ;
+  background-color: rgb(46, 46, 51) ;
+  --clr-light: #fdffc4;
+  --clr-dark: #00332a;
+  --clr-primary: #202302;
+  --clr-secondary: #00100d;
+  --clr-accent: #ff7750;
+  --foreground: var(--clr-light);
+  --background: var(--clr-dark);
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -97,7 +108,23 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
 }
 
-
+/**
+* Button to change color
+*/
+.color-mode-toggle {
+  position: absolute;
+  z-index: 100;
+  top: 1em;
+  right: 1em;
+  color: var(--foreground);
+  border: 2px solid currentColor;
+  padding: 4px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
 
 /**
  * Links
@@ -141,8 +168,6 @@ blockquote {
   }
 }
 
-
-
 /**
  * Code formatting
  */
@@ -168,8 +193,6 @@ pre {
     padding-left: 0;
   }
 }
-
-
 
 /**
  * Wrapper
@@ -202,8 +225,6 @@ pre {
   clear: both;
 }
 
-
-
 /**
  * Icons
  */
@@ -222,8 +243,6 @@ pre {
     padding-top: 5px;
   }
 }
-
-
 
 /**
  * Tables
