@@ -1,6 +1,9 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
 ---
+
+Yannick is a system and process engineer currently working at NTT ltd. In the past Yannick has worked for all the big internet providers in his home country the Netherlands.
+
+### Contact me
+
+[yannick@sanajong.net](mailto:yannick@sanajong.net)
