@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHL API Test V0.1</title>
+    <style>
+        input:invalid {
+          border: 2px dashed red;
+        }
+  
+        input:invalid:required {
+          background-image: linear-gradient(to right, pink, lightgreen);
+        }
+  
+        input:valid {
+          border: 2px solid black;
+        }
+      </style>
+</head>
+<body>
+    <section>
+        <form>
+            <label for="X"> Tracking Number: </label>
+            <input type="text" id="tracking_number" name="X" required >
+        </form>
+        <button type="submit" ></button>
+    </section>
+</body>
+</html>
