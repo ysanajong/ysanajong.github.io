@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+  
+<head>
+    <title>
+        JavaScript 
+      | Detecting the Operating System of User.
+    </title>
+</head>
+  
+<body style="text-align:center;" id="body">
+    <h1 style="color:green;">  
+            Don't Panic, I am Yannick.
+        </h1>
+    <p id="GFG_UP" 
+       style="font-size: 19px;
+              font-weight: bold;">
+    </p>
+    <p id="version" 
+       style="font-size: 19px;
+              font-weight: bold;">
+    </p>
+    <button onclick="GFG_Fun()">
+        click here
+    </button>
+    <button onclick="SHOW()" >
+      My Browser details.
+    </button>
+    <p>      
+      User Agent:
+      <span id="ua"></span>
+      OS:
+      <span id="platform"> </span>
+      cookieEnabled:
+      <span id="cookieEnabled"> </span>
+      Languages:
+      <span id="languages"> </span>
+      Language:
+      <span id="language"> </span>
+      Plaform:
+      <span id="platform"> </span>
+      Vendor:
+      <span id="vendor"> </span>
+      Your IP Address:
+      <span id="ip"> </span>
+    </p>
+    <script>
+      const api_url = 'https://api.ipify.org/?format=json';
+      async function getIP() {
+        const response = await fetch(api_url);
+        const data = await response.json();
+        console.log(data.ip);
+        document.getElementById('ip').textContent = data.ip;
+      }
+        //el_up.innerHTML = "Click on the button to get the OS of User's System.";
+        document.getElementById("platform").innerHTML = navigator.platform;
+        document.getElementById("ua").innerHTML = navigator.userAgent;
+        document.getElementById("cookieEnabled").innerHTML = navigator.cookieEnabled;
+        document.getElementById("language").innerHTML = navigator.language;
+        document.getElementById("languages").innerHTML = navigator.languages;
+        document.getElementById("vendor").innerHTML = navigator.vendor;
+      
+      getIP();
+        // fetch('')
+      //    .then(results => results.json())
+        //  .then(data => console.log(data.ip));
+         
+
+        </script>
+</body>
+  
+</html>

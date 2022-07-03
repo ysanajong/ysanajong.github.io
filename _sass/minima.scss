@@ -10,13 +10,7 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
 
-$text-color:       #111 !default;
-$background-color: #fdfdfd !default;
-$brand-color:      #2a7ae2 !default;
-
-$grey-color:       #828282 !default;
-$grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
+@import "colors";
 
 $color1:          rgb(107, 153, 194) !default;
 $color1-light:    lighten($color1, 30%) !default;
@@ -24,6 +18,8 @@ $color1-dark:     darken($color1, 30%) !default;
 
 
 $table-text-align: left !default;
+
+// Dark theme
 
 // Width of the content area
 $content-width:    800px !default;
@@ -47,6 +43,7 @@ $on-laptop:        800px !default;
 @mixin relative-font-size($ratio) {
   font-size: $base-font-size * $ratio;
 }
+
 
 // Import partials.
 @import

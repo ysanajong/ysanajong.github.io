@@ -9,14 +9,13 @@ dl, dd, ol, ul, figure {
 }
 
 
-
 /**
  * Basic styling
  */
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: $text-color;
-  background-color: $background-color;
+  color: var(--text-color);
+  background-color: var(--background-color);
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -27,7 +26,6 @@ body {
   min-height: 100vh;
   flex-direction: column;
 }
-
 
 
 /**
@@ -97,21 +95,89 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
 }
 
+/**
+* Button to change color
+*/
+.toggle {
+  display: grid;
+  grid-template-columns: 1fr 3rem;
+  border: none;
+  margin: 0;
 
+  label {
+    font-size: rem(14);
+    font-weight: 700;
+    color: var(--toggle);
 
+    &[for='dark'] {
+      line-height: rem(24);
+      margin-right: rem(13);
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    height: rem(24);
+  }
+
+  input[type='radio'] {
+    margin: 0 rem(-2) 0 rem(-2);
+    opacity: 0;
+    width: rem(24);
+    height: rem(24);
+
+    &:focus ~ .toggle__button {
+      border: 2px solid white;
+    }
+  }
+
+  &__background {
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    border-radius: rem(12);
+    background: var(--toggle-bg);
+    pointer-events: none;
+  }
+
+  &__button {
+    position: absolute;
+    left: rem(3);
+    top: rem(3);
+    right: 100%;
+    width: rem(18);
+    height: rem(18);
+    border-radius: 50%;
+    background-color: var(--toggle-button);
+    transition: all 150ms ease-in-out;
+  }
+
+  #light:checked ~ .toggle__button {
+    left: calc(100% - 21px);
+    right: 3px;
+  }
+
+  #system:checked ~ .toggle__button {
+    left: 50%;
+    right: auto;
+    transform: translate(-50%);
+  }
+}
 /**
  * Links
  */
 a {
-  color: $brand-color;
+  color: var(--brand-color);
   text-decoration: none;
 
   &:visited {
-    color: darken($brand-color, 15%);
+    color: darken (var(--brand-color), 15%);
   }
 
   &:hover {
-    color: $text-color;
+    color: var(--text-color);
     text-decoration: underline;
   }
 
@@ -129,8 +195,8 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
+  color: var(--grey-color);
+  border-left: 4px solid var(--grey-color-light);
   padding-left: $spacing-unit / 2;
   @include relative-font-size(1.125);
   letter-spacing: -1px;
@@ -141,15 +207,13 @@ blockquote {
   }
 }
 
-
-
 /**
  * Code formatting
  */
 pre,
 code {
   @include relative-font-size(0.9375);
-  border: 1px solid $grey-color-light;
+  border: 1px solid var(--grey-color-light);
   border-radius: 3px;
   background-color: #eef;
 }
@@ -168,8 +232,6 @@ pre {
     padding-left: 0;
   }
 }
-
-
 
 /**
  * Wrapper
@@ -202,8 +264,6 @@ pre {
   clear: both;
 }
 
-
-
 /**
  * Icons
  */
@@ -212,7 +272,7 @@ pre {
     width: 16px;
     height: 16px;
     display: inline-block;
-    fill: #{$grey-color};
+    fill: #{var(--grey-color)};
     padding-right: 5px;
     vertical-align: text-top;
 }
@@ -223,8 +283,6 @@ pre {
   }
 }
 
-
-
 /**
  * Tables
  */
@@ -232,23 +290,23 @@ table {
   margin-bottom: $spacing-unit;
   width: 100%;
   text-align: $table-text-align;
-  color: lighten($text-color, 18%);
+  color: lighten (var(--text-color), 18%);
   border-collapse: collapse;
-  border: 1px solid $grey-color-light;
+  border: 1px solid var(--grey-color-light);
   tr {
     &:nth-child(even) {
-      background-color: lighten($grey-color-light, 6%);
+      background-color: lighten (var(--grey-color-light), 6%);
     }
   }
   th, td {
-    padding: ($spacing-unit / 3) ($spacing-unit / 2);
+    padding: ($spacing-unit / 3) (--spacing-unit / 2);
   }
   th {
-    background-color: lighten($grey-color-light, 3%);
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
+    background-color: lighten (var(--grey-color-light), 3%);
+    border: 1px solid darken (var(--grey-color-light), 4%);
+    border-bottom-color: darken (var(--grey-color-light), 12%);
   }
   td {
-    border: 1px solid $grey-color-light;
+    border: 1px solid var(--grey-color-light);
   }
 }
