@@ -14,8 +14,8 @@ dl, dd, ol, ul, figure {
  */
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: $text-color;
-  background-color: $background-color;
+  color: var(--text-color);
+  background-color: var(--background-color);
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -27,19 +27,6 @@ body {
   flex-direction: column;
 }
 
-.darkmode {
-  
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: whitesmoke ;
-  background-color: rgb(46, 46, 51) ;
-  --clr-light: #fdffc4;
-  --clr-dark: #00332a;
-  --clr-primary: #202302;
-  --clr-secondary: #00100d;
-  --clr-accent: #ff7750;
-  --foreground: var(--clr-light);
-  --background: var(--clr-dark);
-}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -111,34 +98,27 @@ h1, h2, h3, h4, h5, h6 {
 /**
 * Button to change color
 */
-.color-mode-toggle {
-  position: absolute;
-  z-index: 100;
-  top: 1em;
-  right: 1em;
-  color: var(--foreground);
-  border: 2px solid currentColor;
-  padding: 4px;
-  background: transparent;
-  cursor: pointer;
-  border-radius: 5px;
-  width: 30px;
-  height: 30px;
+.toggle {
+  display: grid;
+  grid-template-columns: 1fr 3rem;
+  border: none;
+  margin: 1rem;
+  justify-content: center;
 }
 
 /**
  * Links
  */
 a {
-  color: $brand-color;
+  color: var(--brand-color);
   text-decoration: none;
 
   &:visited {
-    color: darken($brand-color, 15%);
+    color: darken (var(--brand-color), 15%);
   }
 
   &:hover {
-    color: $text-color;
+    color: var(--text-color);
     text-decoration: underline;
   }
 
@@ -156,8 +136,8 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
+  color: var(--grey-color);
+  border-left: 4px solid var(--grey-color-light);
   padding-left: $spacing-unit / 2;
   @include relative-font-size(1.125);
   letter-spacing: -1px;
@@ -174,7 +154,7 @@ blockquote {
 pre,
 code {
   @include relative-font-size(0.9375);
-  border: 1px solid $grey-color-light;
+  border: 1px solid var(--grey-color-light);
   border-radius: 3px;
   background-color: #eef;
 }
@@ -233,7 +213,7 @@ pre {
     width: 16px;
     height: 16px;
     display: inline-block;
-    fill: #{$grey-color};
+    fill: #{var(--grey-color)};
     padding-right: 5px;
     vertical-align: text-top;
 }
@@ -251,23 +231,23 @@ table {
   margin-bottom: $spacing-unit;
   width: 100%;
   text-align: $table-text-align;
-  color: lighten($text-color, 18%);
+  color: lighten (var(--text-color), 18%);
   border-collapse: collapse;
-  border: 1px solid $grey-color-light;
+  border: 1px solid var(--grey-color-light);
   tr {
     &:nth-child(even) {
-      background-color: lighten($grey-color-light, 6%);
+      background-color: lighten (var(--grey-color-light), 6%);
     }
   }
   th, td {
-    padding: ($spacing-unit / 3) ($spacing-unit / 2);
+    padding: ($spacing-unit / 3) (--spacing-unit / 2);
   }
   th {
-    background-color: lighten($grey-color-light, 3%);
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
+    background-color: lighten (var(--grey-color-light), 3%);
+    border: 1px solid darken (var(--grey-color-light), 4%);
+    border-bottom-color: darken (var(--grey-color-light), 12%);
   }
   td {
-    border: 1px solid $grey-color-light;
+    border: 1px solid var(--grey-color-light);
   }
 }

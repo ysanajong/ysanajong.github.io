@@ -1,4 +1,19 @@
 <header class="site-header" role="banner">
+  <div class="top-bar">
+    <fieldset
+    class="top-bar-toggle toggle"
+    aria-label="theme toggle"
+    role="radiogroup" >
+      <label for="dark">Dark Mode <span class="visually-hidden">On</span></label>
+      <div class="toggle__wrapper">
+        <input type="radio" name="theme" id="dark" />
+        <input type="radio" name="theme" id="light" />
+        <span aria-hidden="true" class="toggle__background"></span>
+        <span aria-hidden="true" class="toggle__button"></span>
+      </div>
+      <label for="light" class="visually-hidden">Dark Mode Off</label>
+    </fieldset>
+  </div>
 
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
@@ -24,14 +39,10 @@
             {%- endif -%}
           {%- endfor -%}
 
-          <!--
-
-          <button onclick="switchMode()">
-          Mode
-          </button>
-                    -->
       </div>
       </nav>
     {%- endif -%}
+    
   </div>
+
 </header>

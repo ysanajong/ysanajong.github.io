@@ -1,0 +1,37 @@
+:root {
+    --text-color:       #111 ;
+    --background-color: #fdfdfd ;
+    --brand-color:      #2a7ae2 ;
+    --grey-color:       #828282 ;
+    --grey-color-light: lighten (var(--grey-color), 40%);
+    --grey-color-dark:  darken (var(--grey-color), 25%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color:       #111 ;
+    --background-color: #fdfdfd ;
+    --brand-color:      #2a7ae2 ;
+    --grey-color:       #828282 ;
+    --grey-color-light: lighten (var(--grey-color), 40%);
+    --grey-color-dark:  darken (var(--grey-color), 25%);
+  }
+}
+
+body.light {
+  --text-color:       #111 ;
+  --background-color: #fdfdfd ;
+  --brand-color:      #2a7ae2 ;
+  --grey-color:       #828282 ;
+  --grey-color-light: lighten (var(--grey-color), 40%);
+  --grey-color-dark:  darken (var(--grey-color), 25%);
+}
+
+body.dark {
+  --text-color:       #111 ;
+  --background-color: #fdfdfd ;
+  --brand-color:      #2a7ae2 ;
+  --grey-color:       #828282 ;
+  --grey-color-light: lighten (var(--grey-color), 40%);
+  --grey-color-dark:  darken (var(--grey-color), 25%);
+}
