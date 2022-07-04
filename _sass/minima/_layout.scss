@@ -8,14 +8,14 @@
 
   // Positioning context for the mobile navigation icon
   position: relative;
-  border: 1ch solid blueviolet;
+ // border: 1ch solid blueviolet;
 }
 
 .trigger {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 2px solid green;
+  //border: 2px solid green;
 }
 
 .top-bar {
@@ -89,7 +89,8 @@
       text-align: center;
 
       > svg {
-        fill: var(--nav-menu-color);
+        // fill: var(--nav-menu-color);
+        fill: var(--text-color);
       }
     }
 

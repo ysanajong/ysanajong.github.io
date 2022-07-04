@@ -7,6 +7,12 @@
     --nav-menu-dark:   #fefeff;
     --code-bg-light: #eef;
     --code-bg-dark: rgb(18, 18, 20);
+
+    --btn-br-light: hsl(0, 53%, 47%);
+    --btn-br-dark: hsl(0, 3%, 6%);
+
+    --btn-bg-light: hsl(0, 3%, 58%);
+    --btn-bg-dark: hsl(212, 53%, 47%);
     
     --text-color:       var(--text-color-light);
     --background-color: var(--background-light);
@@ -14,15 +20,10 @@
     --grey-color:       #828282 ;
     --grey-color-light: lighten (var(--grey-color), 40%);
     --grey-color-dark:  darken (var(--grey-color), 25%);
-    --toggle-bg-light: hsl(0, 53%, 47%);
-    --toggle-bg-start: hsl(210, 78%, 56%);
-    --toggle-bg-end: hsl(146, 68%, 55%);
-    --toggle-light: hsl(230, 19%, 60%);
-    --toggle-button-light: hsl(228, 46%, 96%);
-    --toggle: var(--toggle-light);
-    --toggle-bg: var(--toggle-bg-light);
-    --toggle-button: var(--toggle-button-light);
-    --toggle: #ff0808;
+
+    --toggle-button: var(--btn-bg-light);
+    --toggle-btn-br: var(--btn-br-light);
+
     --nav-menu-color: var(--nav-menu-light);
     --code-bg: var(--code-bg-light);
 }
@@ -36,15 +37,16 @@
     --grey-color:       #828282 ;
     --grey-color-light: lighten (var(--grey-color), 40%);
     --grey-color-dark:  darken (var(--grey-color), 25%);
-    --toggle: var(--light-bg);
+
     --toggle-bg: linear-gradient(
       225deg,
       var(--toggle-bg-end) 0%,
       var(--toggle-bg-start) 98.02%
     );
-    --toggle-button: var(--dark-bg);
     --nav-menu-color: var(--nav-menu-dark);
     --code-bg: var(--code-bg-dark);
+    --toggle-button: var(--btn-bg-dark);
+    --toggle-btn-br: var(--btn-br-dark);
   }
 }
 
@@ -56,14 +58,8 @@ body.light {
   --grey-color:       #828282 ;
   --grey-color-light: lighten (var(--grey-color), 40%);
   --grey-color-dark:  darken (var(--grey-color), 25%);
-  --toggle-bg-light: hsl(230, 22%, 74%);
-  --toggle-bg-start: hsl(210, 78%, 56%);
-  --toggle-bg-end: hsl(146, 68%, 55%);
-  --toggle-light: hsl(230, 19%, 60%);
-  --toggle-button-light: hsl(228, 46%, 96%);
-  --toggle: var(--toggle-light);
-  --toggle-bg: var(--toggle-bg-light);
-  --toggle-button: var(--toggle-button-light);
+  --toggle-button: var(--btn-bg-light);
+  --toggle-btn-br: var(--btn-br-light);
   --nav-menu-color: var(--nav-menu-light);
   --code-bg: var(--code-bg-light);
 }
@@ -77,13 +73,13 @@ body.dark {
   --grey-color-light: lighten (var(--grey-color), 40%);
 //  --grey-color-dark:  darken (var(--grey-color), 25%);
   --grey-color-dark:  lighten (var(--grey-color), 50%);
-  --toggle: var(--light-bg);
+  --toggle-button: var(--btn-bg-dark);
+  --toggle-btn-br: var(--btn-br-dark);
   --toggle-bg: linear-gradient(
     225deg,
     var(--toggle-bg-end) 0%,
     var(--toggle-bg-start) 98.02%
   );
-  --toggle-button: var(--dark-bg);
   --nav-menu-color: var(--nav-menu-dark);
   --code-bg: var(--code-bg-dark);
 }
