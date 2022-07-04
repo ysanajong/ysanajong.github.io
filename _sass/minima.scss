@@ -22,10 +22,11 @@ $table-text-align: left !default;
 // Dark theme
 
 // Width of the content area
-$content-width:    800px !default;
+$content-width:    900px !default;
 
 $on-palm:          715px !default;
 $on-laptop:        800px !default;
+
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -49,5 +50,6 @@ $on-laptop:        800px !default;
 @import
   "minima/base",
   "minima/layout",
-  "minima/syntax-highlighting"
+  "minima/syntax-highlighting",
+  "components/theme-button"
 ;
