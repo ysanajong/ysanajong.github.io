@@ -1,6 +1,21 @@
 :root {
-    --text-color:       #111 ;
-    --background-color: #fdfdfd ;
+    --background-light: hsl(0, 0%, 100%) ;
+    --background-dark:  hsl(180, 2%, 9%) ;
+    --text-color-light: #111 ;
+    --text-color-dark:  rgb(226, 229, 236) ;
+    --nav-menu-light:   #1b1b1c;
+    --nav-menu-dark:   #fefeff;
+    --code-bg-light: #eef;
+    --code-bg-dark: rgb(18, 18, 20);
+
+    --btn-br-light: #2a7ae2;
+    --btn-br-dark: hsl(0, 0%, 90%);
+
+    --btn-bg-light: hsl(0, 3%, 58%);
+    --btn-bg-dark: hsl(212, 53%, 47%);
+    
+    --text-color:       var(--text-color-light);
+    --background-color: var(--background-light);
     --brand-color:      #2a7ae2 ;
     --grey-color:       #828282 ;
     --grey-color-light: lighten (var(--grey-color), 40%);

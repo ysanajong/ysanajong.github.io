@@ -23,10 +23,10 @@ layout: default
 
 
 <div class="container">
-  <h1>404</h1>
+  <h1 contenteditable>404</h1>
 
   <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <p contenteditable>The requested page could not be found.</p>
 
 
   <iframe src="https://gadgets.buienradar.nl/gadget/zoommap/?lat=52.37403&lng=4.88969&overname=2&zoom=11&naam=Amsterdam &size=3&voor=1" scrolling=no width=550 height=512 frameborder=no></iframe>
@@ -53,11 +53,11 @@ layout: default
 
 </div>
 <script >
-  const api_url = 'https://api.ipify.org/?format=json';
+  const api_url = 'https://api64.ipify.org/?format=json';
   async function getIP() {
     const response = await fetch(api_url);
     const data = await response.json();
-    console.log(data.ip);
+    console.log(data);
     document.getElementById('ip').textContent = data.ip;
   }
   document.getElementById("ua").innerHTML = navigator.userAgent;
