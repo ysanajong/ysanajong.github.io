@@ -1,21 +1,7 @@
 <header class="site-header" role="banner">
-  <div class="top-bar">
-    <fieldset
-    class="top-bar-toggle toggle"
-    aria-label="theme toggle"
-    role="radiogroup" >
-      <label for="dark">Dark Mode <span class="visually-hidden">On</span></label>
-      <div class="toggle__wrapper">
-        <input type="radio" name="theme" id="dark" />
-        <input type="radio" name="theme" id="light" />
-        <span aria-hidden="true" class="toggle__background"></span>
-        <span aria-hidden="true" class="toggle__button"></span>
-      </div>
-      <label for="light" class="visually-hidden">Dark Mode Off</label>
-    </fieldset>
-  </div>
+  
 
-  <div class="wrapper">
+  <div class="wrapper head">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
@@ -32,6 +18,22 @@
         </label>
 
         <div class="trigger">
+
+
+          <fieldset class="top-bar-toggle toggle" aria-label="theme toggle" role="radiogroup" >
+            <div class="toggle">
+              <label for="light" class="visually-hidden">Light Theme</label>
+            </label>
+            <span class="toggle__wrapper">
+              <input type="radio" name="theme" id="light" />
+              <input type="radio" name="theme" id="dark" />
+              <span aria-hidden="true" class="toggle__background"></span>
+              <span aria-hidden="true" class="toggle__button"></span>
+            </span>
+            <label for="dark">Dark Theme</label>          </div>
+          </fieldset>
+
+
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
             {%- if my_page.title -%}
@@ -43,6 +45,8 @@
       </nav>
     {%- endif -%}
     
+  <div class="top-bar">
+    </div>
   </div>
 
 </header>

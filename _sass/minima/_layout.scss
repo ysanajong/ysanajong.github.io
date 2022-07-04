@@ -8,12 +8,21 @@
 
   // Positioning context for the mobile navigation icon
   position: relative;
+  border: 1ch solid blueviolet;
+}
+
+.trigger {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid green;
 }
 
 .top-bar {
-  display: flex;
+ // display: flex;
   border: 2px solid var(--text-color);
-  margin-left: auto;
+ // justify-content: right;
+  align-items: center;
 }
 
 .site-title {
@@ -80,7 +89,7 @@
       text-align: center;
 
       > svg {
-        fill: var(--grey-color-dark);
+        fill: var(--nav-menu-color);
       }
     }
 
