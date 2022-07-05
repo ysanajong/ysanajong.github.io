@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Test</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli&display=swap">
+    <link rel="stylesheet" href="api.css">
+</head>
+<body>
+    <div class="wrapper" id="wrapper">
+        <section class="header">
+            <img src="https://clipground.com/images/dhl-logo-clipart.png">
+            <span id="title"><h1>ShitSent Tracking</h1></span>
+            <span id="desc">Powered by Valentin0</span>
+        </section>
+        <div class="input-wrapper">
+            <div class="field">
+                <input onclick="rW()" type="text" title="Enter tracking number" placeholder="Enter tracking number" id="tn-input" ></input>
+                <button onclick="geT()" >Get Shipment Info</button>
+            </div>
+        </div>
+
+        <div class="output" id="output">
+            <span > <strong>Tracking Number:</strong> </span>
+            <span id="ref-num"></span>
+            
+            <span > <strong> From:</strong> </span>
+            <span id="o-address"></span><span id="o-country"></span>
+            <span > <strong> Destination:</strong> </span>
+            <span id="d-address"></span><span id="d-country"></span>
+            <span > <strong> Status:</strong> </span>
+            <span id="status-code"></span>
+            <span id="status-desc"></span>
+            <span id="status-time"></span>
+
+        </div>
+
+        <div id="error" class="E404"><h3>Enter Valid Tracking Number Dude.. </h3> </div>
+    </div>
+    <script src="dhl-api.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+:root {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.wrapper {
+    margin: 2em;
+    /* justify-content: center;
+    align-items: center; */
+    background-color: cornflowerblue;
+    min-height: 80vh;
+}
+.header {
+    font-size: 1.5rem;
+    display: flex;
+    background-color: rgb(174, 154, 44);
+    padding: 2ch;
+}
+.header > img {
+    width: auto;
+    max-height: 50px;
+    align-self: center;
+}
+.header > #title {
+    margin-left: 2ch;
+}
+.header > #desc {
+    margin-left: auto;
+    align-self: center;
+}
+.input-wrapper {
+    margin: 2ch;
+    max-width: 80&;
+    background-color: black;
+}
+.field {
+    font-size: 1em;
+}
+#error {
+    display: none;
+    background-color: red;
+}
+input {
+    height: 3em;
+    width: 200px;
+}
+.field > button {
+    font: 2em sans-serif yellow;
+}
+
+.output {
+    margin: 2ch;
+    padding: 2ch;
+    border: 2px solid wheat;
+    min-width: 80%;
+}
+.output span {
+    border: 1px solid grey;
+    justify-self: center;
+}
+
+.hidden {
+    display: none;
+}
