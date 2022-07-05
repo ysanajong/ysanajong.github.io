@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Test 2</title>
+    <style>
+        .body {
+            max-width: 80vw;
+            margin: 2ch;
+            padding: 2ch;
+            background-color: black;
+
+        }
+        .wrapper {
+            margin: 4ch;
+            /* max-width: 70%; */
+            display: grid;
+            gap: 4ch;
+            justify-self: center;
+            justify-content: center;
+            align-items: center;
+            background-color: lightblue;
+        }
+        .output {
+            background-color: honeydew;
+            padding: 10px;
+        }
+
+        #output {
+            background-color: black;
+            color: azure;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <section class="header">
+            <h1>DHL Shipment Tracker</h1>
+        </section>
+        <div class="field">
+            <input type="text" title="Enter tracking number" placeholder="Enter tracking number" id="tn-input"></input>
+            <button onclick="getDHL()" >Get Shipment Info</button>
+        </div>
+        <div class="output" id="re">
+            <span > <strong> Number:</strong> </span>
+            <span id="track-num">tracking number</span>
+            <span > <strong> Origin Address:</strong> </span>
+            <span id="org_add">tracking number</span>
+            <span > <strong> Destination:</strong> </span>
+            <span id="dest">tracking number</span>
+            <span > <strong> Status:</strong> </span>
+            <span id="status">tracking number</span>
+        </div>
+        <div class="output" id="output">
+
+        </div>
+    </div>    
+</body>
+<script>
+    async function getDHL() {
+        inPut = document.getElementById('tn-input').value;
+        const para = new URLSearchParams({
+            trackingNumber: inPut,
+        });
+        const hellPiemel = para.toString();
+        //const api_url = 'https://api-eu.dhl.com/track/shipments?'+hellPiemel;
+        const api_url = `https://api-eu.dhl.com/track/shipments?${para.toString()}`;
+        const api_key = process.env.DHL;
+        const response = await fetch(api_url, {
+            method: 'GET',
+            headers: {
+                'DHL-API-Key': api_key,
+                //'DHL-API-Key': 'pO2qP8ianK1QwSAnC2zgIyN3rxR14bzn',
+            },
+        } );
+        const data = await response.json();
+        const trackNum = data.shipments[0].details.references[0].number;
+        const destAdd  = data.shipments[0].destination.address.addressLocality;
+        const status = data.shipments[0].status.statusCode;
+        const orgAdd = data.shipments[0].origin.address.addressLocality;
+        const lengte = data.shipments[0].events.length;
+        const time = data.shipments[0].events.timestamps;
+        const e_time = data.shipments[0].events[6].timestamp
+        document.getElementById('track-num').textContent = trackNum;
+        document.getElementById('dest').textContent = destAdd;
+        document.getElementById('org_add').textContent = orgAdd;
+        document.getElementById('status').textContent = status;
+        console.log(data);
+        
+        console.log(lengte);
+    //    document.getElementById('output').innerHTML = `
+   //     <h1 class='evt'>${lengte} events </h1>
+    //    /*  ${data.shipments[0].events.map(function(evt) {
+    //         return `
+    //         <span> ${data.shipments[0].events.timestamp}`
+    //     } )    
+    //      */
+       // `
+        //${data.shipments[0].events.map().join('')}
+        }
+// console.log(data)
+/* document.getElementById('test').innerHTML = `
+<h1> DHL Shipment Tracking Information </h1>
+Events ${events.length}
+
+` */
+</script>
+</html>

@@ -117,3 +117,7 @@ body.dark {
         -webkit-mask-image: url(https://developer.mozilla.org/static/media/theme-light.af1aa3887c0deadaaf2e.svg);
         mask-image: url(https://developer.mozilla.org/static/media/theme-light.af1aa3887c0deadaaf2e.svg);
     }
+
+.wrapper {
+    background-color: #f1c40f;
+}

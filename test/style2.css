@@ -1,0 +1,34 @@
+.body {
+    background: #f1c40f;
+    
+}
+
+.wrapper {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 5px;
+    background-color: cornflowerblue;
+    min-height: 70vh;
+}
+
+#error {
+    display: none;
+}
+input {
+    height: 3ch;
+}
+
+.output {
+    border: 2px solid wheat;
+    min-width: 80%;
+}
+.output span {
+    border: 1px solid grey;
+    justify-self: center;
+}
+
+.hidden {
+    display: none;
+}
