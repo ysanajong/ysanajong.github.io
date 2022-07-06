@@ -29,7 +29,7 @@
 .input-wrapper {
     margin: 2ch;
     max-width: 80&;
-    background-color: black;
+    background-color: lightgrey;
 }
 .field {
     font-size: 1em;
@@ -44,6 +44,8 @@ input {
 }
 .field > button {
     font: 2em sans-serif yellow;
+    border-radius: 1em%;
+    height: 3em;
 }
 
 .output {

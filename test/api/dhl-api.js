@@ -20,21 +20,22 @@
 // API Function 
 document.getElementById('output').classList.add('hidden');
 
-function getDHL() {
-    try {
-        geT();
-    }   catch (err) {
-        console.log(err)
-        document.getElementById('error').textContent = err;
-        document.getElementById('error').style.display = block;
-    }
-}
-
-function rW() {
-        document.getElementById('wrapper').style.backgroundColor = 'white';
-        document.getElementById('error').style.display = 'none';
-    }
-
+// function getDHL() {
+//     try {
+//         geT();
+//     }   catch (err) {
+//         console.log(err)
+//         document.getElementById('error').textContent = err;
+//         document.getElementById('error').style.display = block;
+//     }
+// }
+// function rW() {
+//         document.getElementById('wrapper').style.backgroundColor = 'white';
+//         document.getElementById('error').style.display = 'none';
+//     }
+    
+// function poPulate() {
+// }
 async function geT() {
     document.getElementById('output').classList.add('hidden');
     inPut = document.getElementById('tn-input').value;
@@ -50,29 +51,30 @@ async function geT() {
     if (response.status !== 200) {
         document.getElementById('error').style.display = 'block';
         document.getElementById('wrapper').style.backgroundColor = 'red';
-        console.log("Shit..")
+        console.log("Shit..");
     } else {
-        const d = await response.json();
-        console.log(`OK gelukt, laat me ff alles doornemen`)
+        const d = await response.json()
         console.log(d)
-        document.getElementById('ref-num').textContent = d.shipments[0].details.references[0].number
-        document.getElementById('o-country').textContent = d.shipments[0].origin.address.countryCode
-        document.getElementById('o-address').textContent = d.shipments[0].origin.address.addressLocality
-        document.getElementById('d-address').textContent = d.shipments[0].destination.address.addressLocality
-        document.getElementById('d-country').textContent = d.shipments[0].destination.address.countryCode
-        // document.getElementById('proofOfDelivery').textContent = d.shipments[0].details.proofOfDelivery.timestamp
-        // document.getElementById('proofOfDeliverySignedAvailable').textContent = d.shipments[0].details.proofOfDeliverySignedAvailable
-        // document.getElementById('totalNumberOfPieces').textContent = d.shipments[0].details.totalNumberOfPieces
-        // document.getElementById('weight-ut').textContent = d.shipments[0].details.weight.unitText
-        // document.getElementById('weight-v').textContent = d.shipments[0].details.weight.value
-        // document.getElementById('volume-ut').textContent = d.shipments[0].details.volume.unitText
-        // document.getElementById('volume-v').textContent = d.shipments[0].details.volume.value
-        // document.getElementById('').textContent = d.shipments[0].events[0] // need to iterate trough as number of events might defer..
-        // document.getElementById('').textContent = d.shipments[0].events.length // to see the number of events in the object.
-        document.getElementById('status-desc').textContent = d.shipments[0].status.description
-        document.getElementById('status-code').textContent = d.shipments[0].status.statusCode
-        document.getElementById('status-time').textContent = d.shipments[0].status.timestamp
-        document.getElementById('output').classList.remove('hidden')
-        console.log(d);        
+    //     console.log(`OK gelukt, laat me ff alles doornemen`);
+    //     document.getElementById('ref-num').textContent = d.shipments[0].details.references[0].number
+    //     document.getElementById('o-country').textContent = d.shipments[0].origin.address.countryCode
+    //     document.getElementById('o-address').textContent = d.shipments[0].origin.address.addressLocality
+    //     document.getElementById('d-address').textContent = d.shipments[0].destination.address.addressLocality
+    //     document.getElementById('d-country').textContent = d.shipments[0].destination.address.countryCode
+    //     document.getElementById('proofOfDelivery').textContent = d.shipments[0].details.proofOfDelivery.timestamp
+    //     document.getElementById('proofOfDeliverySignedAvailable').textContent = d.shipments[0].details.proofOfDeliverySignedAvailable
+    //     document.getElementById('total-pieces').textContent = d.shipments[0].details.totalNumberOfPieces
+    //     document.getElementById('weight-ut').textContent = d.shipments[0].details.weight.unitText
+    //     document.getElementById('weight-v').textContent = d.shipments[0].details.weight.value
+    //     document.getElementById('volume-ut').textContent = d.shipments[0].details.volume.unitText
+    //     document.getElementById('volume-v').textContent = d.shipments[0].details.volume.value
+    //     // let eventS = d.shipments[0].events[0] // need to iterate trough as number of events might defer..
+    //    // document.getElementById('').textContent = d.shipments[0].events[0] // need to iterate trough as number of events might defer..
+    //   //  document.getElementById('').textContent = d.shipments[0].events.length // to see the number of events in the object.
+    //     document.getElementById('status-desc').textContent = d.shipments[0].status.description
+    //     document.getElementById('status-code').textContent = d.shipments[0].status.statusCode
+    //     document.getElementById('status-time').textContent = d.shipments[0].status.timestamp    
+       // document.getElementById('output').classList.remove('hidden')
+      //  console.log(d)  
     }
 }
