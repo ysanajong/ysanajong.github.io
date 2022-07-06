@@ -95,76 +95,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
 }
 
-/**
-* Button to change color
-*/
-.toggle {
-  display: grid;
-  grid-template-columns: 1fr 3rem;
-  border: none;
-  margin: 0;
 
-  label {
-    font-size: rem(14);
-    font-weight: 700;
-    color: var(--toggle);
-
-    &[for='dark'] {
-      line-height: rem(24);
-      margin-right: rem(13);
-    }
-  }
-
-  &__wrapper {
-    position: relative;
-    height: rem(24);
-  }
-
-  input[type='radio'] {
-    margin: 0 rem(-2) 0 rem(-2);
-    opacity: 0;
-    width: rem(24);
-    height: rem(24);
-
-    &:focus ~ .toggle__button {
-      border: 2px solid white;
-    }
-  }
-
-  &__background {
-    display: block;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    border-radius: rem(12);
-    background: var(--toggle-bg);
-    pointer-events: none;
-  }
-
-  &__button {
-    position: absolute;
-    left: rem(3);
-    top: rem(3);
-    right: 100%;
-    width: rem(18);
-    height: rem(18);
-    border-radius: 50%;
-    background-color: var(--toggle-button);
-    transition: all 150ms ease-in-out;
-  }
-
-  #light:checked ~ .toggle__button {
-    left: calc(100% - 21px);
-    right: 3px;
-  }
-
-  #system:checked ~ .toggle__button {
-    left: 50%;
-    right: auto;
-    transform: translate(-50%);
-  }
-}
 /**
  * Links
  */
@@ -213,9 +144,9 @@ blockquote {
 pre,
 code {
   @include relative-font-size(0.9375);
-  border: 1px solid var(--grey-color-light);
+  border: 11px solid var(--grey-color-light);
   border-radius: 3px;
-  background-color: #eef;
+  background-color: var(--code-bg);
 }
 
 code {
@@ -225,11 +156,12 @@ code {
 pre {
   padding: 8px 12px;
   overflow-x: auto;
-
   > code {
     border: 0;
     padding-right: 0;
     padding-left: 0;
+    word-wrap: break-word;
+    white-space: pre-wrap;
   }
 }
 
@@ -237,12 +169,13 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  //max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  //max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-unit;
   padding-left: $spacing-unit;
+
   @extend %clearfix;
 
   @include media-query($on-laptop) {
@@ -260,7 +193,7 @@ pre {
  */
 %clearfix:after {
   content: "";
-  display: table;
+  display: block;
   clear: both;
 }
 
@@ -272,7 +205,7 @@ pre {
     width: 16px;
     height: 16px;
     display: inline-block;
-    fill: #{var(--grey-color)};
+    fill: var(--brand-color);
     padding-right: 5px;
     vertical-align: text-top;
 }
