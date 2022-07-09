@@ -14,6 +14,8 @@
   --btn-bg-light: hsl(0, 3%, 58%);
   --btn-bg-dark: hsl(212, 53%, 47%);
 
+  --t-delay: 1s;
+
   // --text-color: var(--text-color-light);
   // --background-color: var(--background-light);
   // --brand-color: #2a7ae2;
@@ -63,7 +65,7 @@
   }
 }
 
-body.light {
+body {
   color-scheme: light;
   --text-color: var(--text-color-light);
   --background-color: var(--background-light);
@@ -75,6 +77,7 @@ body.light {
   --toggle-btn-br: var(--btn-br-light);
   --nav-menu-color: var(--nav-menu-light);
   --code-bg: var(--code-bg-light);
+
 }
 
 body.dark {
@@ -93,4 +96,5 @@ body.dark {
       var(--toggle-bg-start) 98.02%);
   --nav-menu-color: var(--nav-menu-dark);
   --code-bg: var(--code-bg-dark);
+ 
 }

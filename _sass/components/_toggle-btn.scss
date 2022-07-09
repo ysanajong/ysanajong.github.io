@@ -2,7 +2,6 @@ theme-toggle {
     --W: 1.11em;
     --H: 1.11em;
     // --H: calc(var(--H) / 2);
-
     --WB: 2.125em;
     --HB: 1.125em;
 
@@ -14,32 +13,24 @@ theme-toggle {
         cursor: pointer;
         border-radius: 2em;
 
-/*         &:hover {
-            font-style: italic;
-            font-weight: bold;
-        } */
-
         &:hover .toggle__background {
-           // border: 1px solid hsla(0, 82%, 48%, 0.743);
+            // border: 1px solid hsla(0, 82%, 48%, 0.743);
         }
 
         &:hover * .toggle-btn {
             border: 1px solid hsla(0, 82%, 48%, 0.743);
         }
 
-
         input {
             appearance: none;
 
             &:checked~* .toggle-btn {
-                background: hsla(0, 82%, 48%, 0.743);
                 transform: translateX(var(--W));
             }
 
-            &:checked~.toggle__background {
+/*             &:checked~.toggle__background {
                 background: hsla(66, 32%, 42%, 0.743);
-
-            }
+            } */
         }
 
         .toggle__background {
@@ -48,7 +39,7 @@ theme-toggle {
             width: var(--WB);
             height: var(--HB);
             border-radius: 1.125em;
-            background: hsl(214, 4%, 37%);
+            background: var(--toggle-btn-br);
             align-items: center;
             transition: all 1s ease-in-out;
         }
@@ -58,11 +49,16 @@ theme-toggle {
             width: var(--W);
             height: var(--H);
             position: absolute;
-            background: #ccc;
+            background: var(--toggle-button);
             border-radius: 1.125em;
             box-shadow: 0px 0px 0px hsla(0, 0%, 11%, 0.121);
-            transition: all 1s ease-out;
+            transition: all 0.5s ease-out;
             //inset: -10% 0 0 0;
         }
+    }
+}
+.body.black {
+    .toggle-btn {
+        transform: translateX(var(--W));
     }
 }
