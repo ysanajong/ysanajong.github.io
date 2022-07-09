@@ -1,6 +1,6 @@
 :root {
-  --background-light: hsl(0, 0%, 100%);
-  --background-dark: hsl(180, 2%, 9%);
+  --background-light: hsl(0, 0%, 100%); 
+  --background-dark: hsl(225, 6%, 13%);
   --text-color-light: #111;
   --text-color-dark: rgb(226, 229, 236);
   --nav-menu-light: #1b1b1c;
@@ -8,26 +8,14 @@
   --code-bg-light: #eef;
   --code-bg-dark: rgb(18, 18, 20);
 
-  --btn-br-light: hsl(0, 53%, 47%);
-  --btn-br-dark: hsl(0, 3%, 6%);
+  --btn-br-light: hsla(113, 7%, 54%, 0.809);
+  --btn-br-dark: hsla(240, 7%, 54%, 0.43);
 
-  --btn-bg-light: hsl(0, 3%, 58%);
+  --btn-bg-light: hsl(0, 83%, 32%);
   --btn-bg-dark: hsl(212, 53%, 47%);
+  --btn-hover: hsla(212, 82%, 48%, 0.743);
 
   --t-delay: 1s;
-
-  // --text-color: var(--text-color-light);
-  // --background-color: var(--background-light);
-  // --brand-color: #2a7ae2;
-  // --grey-color: #828282;
-  // --grey-color-light: lighten (var(--grey-color), 40%);
-  // --grey-color-dark: darken (var(--grey-color), 25%);
-
-  // --toggle-button: var(--btn-bg-light);
-  // --toggle-btn-br: var(--btn-br-light);
-
-  // --nav-menu-color: var(--nav-menu-light);
-  // --code-bg: var(--code-bg-light);
 }
 
 @media (prefers-color-scheme: light) {
@@ -45,6 +33,7 @@
     --code-bg: var(--code-bg-light);
   }
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
