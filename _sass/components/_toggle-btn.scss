@@ -1,0 +1,68 @@
+theme-toggle {
+    --W: 1.11em;
+    --H: 1.11em;
+    // --H: calc(var(--H) / 2);
+
+    --WB: 2.125em;
+    --HB: 1.125em;
+
+    .toggle-switch {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 2em;
+
+/*         &:hover {
+            font-style: italic;
+            font-weight: bold;
+        } */
+
+        &:hover .toggle__background {
+           // border: 1px solid hsla(0, 82%, 48%, 0.743);
+        }
+
+        &:hover * .toggle-btn {
+            border: 1px solid hsla(0, 82%, 48%, 0.743);
+        }
+
+
+        input {
+            appearance: none;
+
+            &:checked~* .toggle-btn {
+                background: hsla(0, 82%, 48%, 0.743);
+                transform: translateX(var(--W));
+            }
+
+            &:checked~.toggle__background {
+                background: hsla(66, 32%, 42%, 0.743);
+
+            }
+        }
+
+        .toggle__background {
+            display: inline-flex;
+            position: relative;
+            width: var(--WB);
+            height: var(--HB);
+            border-radius: 1.125em;
+            background: hsl(214, 4%, 37%);
+            align-items: center;
+            transition: all 1s ease-in-out;
+        }
+
+        .toggle-btn {
+            display: inline-flex;
+            width: var(--W);
+            height: var(--H);
+            position: absolute;
+            background: #ccc;
+            border-radius: 1.125em;
+            box-shadow: 0px 0px 0px hsla(0, 0%, 11%, 0.121);
+            transition: all 1s ease-out;
+            //inset: -10% 0 0 0;
+        }
+    }
+}

@@ -19,26 +19,24 @@
 
           <theme-toggle> 
             <label class="toggle-switch" for="theme-toggle">
-                <span class="toggle-switch__label">Dark theme</span>
+                <span class="toggle-switch__label">Switch theme</span>
                 <input class="toggle-switch__input" id="theme-toggle" role="switch" type="checkbox">
-                <div class="toggle-switch__decor focus-ring" aria-hidden="true">
-                    <div class="toggle-switch__thumb"></div>
+                <div class="toggle__background" aria-hidden="true">
+                    <div class="toggle-btn"></div>
                 </div>
             </label>
         </theme-toggle>
 
-          <fieldset class="top-bar-toggle toggle" aria-label="theme toggle" role="radiogroup" >
+<!--           <fieldset class="top-bar-toggle toggle" aria-label="theme toggle" role="radiogroup" >
             <div class="toggle">
-              <!-- <label for="light" class="visually-hidden">Light Theme</label> -->
-            </label>
             <span class="toggle__wrapper">
-              <!-- <input type="radio" name="theme" id="light" /> -->
-              <input type="checkbox" name="theme" id="dark" />
-              <span aria-hidden="true" class="toggle__background"></span>
-              <span aria-hidden="true" class="toggle__button"></span>
+              <input type="checkbox" name="theme" id="theme-toggle" />
+              <span aria-hidden="true" class="toggle__background">
+                <span aria-hidden="true" class="toggle__button"></span>
+              </span>
             </span>
             <label for="dark">Dark Theme</label>          </div>
-          </fieldset> 
+          </fieldset>  -->
 
 
           {%- for path in page_paths -%}
