@@ -1,48 +1,52 @@
 :root {
-    --background-light: hsl(0, 0%, 100%) ;
-    --background-dark:  hsl(180, 2%, 9%) ;
-    --text-color-light: #111 ;
-    --text-color-dark:  rgb(226, 229, 236) ;
-    --nav-menu-light:   #1b1b1c;
-    --nav-menu-dark:   #fefeff;
-    --code-bg-light: #eef;
-    --code-bg-dark: rgb(18, 18, 20);
+  --background-light: hsl(0, 0%, 100%); 
+  --background-dark: hsl(225, 6%, 13%);
+  --text-color-light: #111;
+  --text-color-dark: rgb(226, 229, 236);
+  --nav-menu-light: #1b1b1c;
+  --nav-menu-dark: #fefeff;
+  --code-bg-light: #eef;
+  --code-bg-dark: rgb(18, 18, 20);
 
-    --btn-br-light: #2a7ae2;
-    --btn-br-dark: hsl(0, 0%, 90%);
+  --btn-br-light: hsla(113, 7%, 54%, 0.809);
+  --btn-br-dark: hsla(240, 7%, 54%, 0.43);
 
-    --btn-bg-light: hsl(0, 3%, 58%);
-    --btn-bg-dark: hsl(212, 53%, 47%);
-    
-    --text-color:       var(--text-color-light);
+  --btn-bg-light: hsl(0, 83%, 32%);
+  --btn-bg-dark: hsl(212, 53%, 47%);
+  --btn-hover: hsla(212, 82%, 48%, 0.743);
+
+  --t-delay: 1s;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --text-color: var(--text-color-light);
     --background-color: var(--background-light);
-    --brand-color:      #2a7ae2 ;
-    --grey-color:       #828282 ;
+    --brand-color: #2a7ae2;
+    --grey-color: #828282;
     --grey-color-light: lighten (var(--grey-color), 40%);
-    --grey-color-dark:  darken (var(--grey-color), 25%);
-
+    --grey-color-dark: darken (var(--grey-color), 25%);
     --toggle-button: var(--btn-bg-light);
     --toggle-btn-br: var(--btn-br-light);
-
     --nav-menu-color: var(--nav-menu-light);
     --code-bg: var(--code-bg-light);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --text-color:       var(--text-color-dark);
+    --text-color: var(--text-color-dark);
     --background-color: var(--background-dark);
-    --brand-color:      #2a7ae2 ;
-    --grey-color:       #828282 ;
+    --brand-color: #2a7ae2;
+    --grey-color: #828282;
     --grey-color-light: lighten (var(--grey-color), 40%);
-    --grey-color-dark:  darken (var(--grey-color), 25%);
+    --grey-color-dark: darken (var(--grey-color), 25%);
 
-    --toggle-bg: linear-gradient(
-      225deg,
-      var(--toggle-bg-end) 0%,
-      var(--toggle-bg-start) 98.02%
-    );
+    --toggle-bg: linear-gradient(225deg,
+        var(--toggle-bg-end) 0%,
+        var(--toggle-bg-start) 98.02%);
     --nav-menu-color: var(--nav-menu-dark);
     --code-bg: var(--code-bg-dark);
     --toggle-button: var(--btn-bg-dark);
@@ -50,36 +54,36 @@
   }
 }
 
-body.light {
+body {
   color-scheme: light;
-  --text-color:       var(--text-color-light);
+  --text-color: var(--text-color-light);
   --background-color: var(--background-light);
-  --brand-color:      #2a7ae2 ;
-  --grey-color:       #828282 ;
+  --brand-color: #2a7ae2;
+  --grey-color: #828282;
   --grey-color-light: lighten (var(--grey-color), 40%);
-  --grey-color-dark:  darken (var(--grey-color), 25%);
+  --grey-color-dark: darken (var(--grey-color), 25%);
   --toggle-button: var(--btn-bg-light);
   --toggle-btn-br: var(--btn-br-light);
   --nav-menu-color: var(--nav-menu-light);
   --code-bg: var(--code-bg-light);
+
 }
 
 body.dark {
   color-scheme: dark;
-  --text-color:       var(--text-color-dark);
+  --text-color: var(--text-color-dark);
   --background-color: var(--background-dark);
-  --brand-color:      #2a7ae2 ;
-  --grey-color:       #828282 ;
+  --brand-color: #2a7ae2;
+  --grey-color: #828282;
   --grey-color-light: lighten (var(--grey-color), 40%);
-//  --grey-color-dark:  darken (var(--grey-color), 25%);
-  --grey-color-dark:  lighten (var(--grey-color), 50%);
+  //  --grey-color-dark:  darken (var(--grey-color), 25%);
+  --grey-color-dark: lighten (var(--grey-color), 50%);
   --toggle-button: var(--btn-bg-dark);
   --toggle-btn-br: var(--btn-br-dark);
-  --toggle-bg: linear-gradient(
-    225deg,
-    var(--toggle-bg-end) 0%,
-    var(--toggle-bg-start) 98.02%
-  );
+  --toggle-bg: linear-gradient(225deg,
+      var(--toggle-bg-end) 0%,
+      var(--toggle-bg-start) 98.02%);
   --nav-menu-color: var(--nav-menu-dark);
   --code-bg: var(--code-bg-dark);
+ 
 }

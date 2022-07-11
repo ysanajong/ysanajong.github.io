@@ -1,0 +1,68 @@
+theme-toggle {
+    --W: 1em;
+    --H: 1em;
+    // --H: calc(var(--H) / 2);
+    --WB: 2.125em;
+    --HB: 1.125em;
+
+    .toggle-switch {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 2em;
+
+/*         &:hover .toggle__background {
+            // border: 1px solid hsla(0, 82%, 48%, 0.743);
+            background: chartreuse;
+        } */
+
+        &:hover * .toggle-btn {
+            border: 1px solid var(--btn-hover);
+        }
+
+        input {
+            appearance: none;
+
+            &:checked~* .toggle-btn {
+                transform: translateX(var(--W));
+                inset: 5% 0 0 0%;
+            }
+
+/*             &:checked~.toggle__background {
+                background: hsla(66, 32%, 42%, 0.743);
+            } */
+        }
+
+        .toggle__background {
+            display: inline-flex;
+            position: relative;
+            width: var(--WB);
+            height: var(--HB);
+            border-radius: 1.125em;
+            background: var(--toggle-btn-br);
+            transition: all 1s ease-in-out;
+        }
+
+        .toggle-btn {
+            display: block;
+            position: absolute;
+            width: var(--W);
+            height: var(--H);
+            background: var(--toggle-button);
+            border-radius: 1.125em;
+            box-shadow: 0px 0px 0px hsla(0, 0%, 11%, 0.121);
+            transition: transform 0.5s ease-out;
+            //transition: all 0.5s ease-out;
+            inset: 5% 0 0 5%;
+        }
+    }
+}
+.body.black {
+    .toggle-btn {
+        transform: translateX(var(--W));
+        inset: 5% 0 0 0%;
+
+    }
+}

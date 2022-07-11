@@ -19,8 +19,6 @@ $color1-dark:     darken($color1, 30%) !default;
 
 $table-text-align: left !default;
 
-// Dark theme
-
 // Width of the content area
 $content-width:    900px !default;
 
@@ -51,5 +49,6 @@ $on-laptop:        800px !default;
   "minima/base",
   "minima/layout",
   "minima/syntax-highlighting",
-  "components/theme-button"
+  "components/toggle-btn"
 ;
+
