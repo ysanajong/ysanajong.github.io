@@ -13,13 +13,13 @@ theme-toggle {
         cursor: pointer;
         border-radius: 2em;
 
-/*         &:hover .toggle__background {
-            // border: 1px solid hsla(0, 82%, 48%, 0.743);
-            background: chartreuse;
-        } */
+        &:hover .toggle__background {
+            //border: 1px solid hsla(0, 82%, 48%, 0.743);
+            background: var(--btn-bg-hover)
+        }
 
         &:hover * .toggle-btn {
-            border: 1px solid var(--btn-hover);
+           // border: 1px solid var(--btn-hover);
         }
 
         input {
@@ -42,7 +42,7 @@ theme-toggle {
             height: var(--HB);
             border-radius: 1.125em;
             background: var(--toggle-btn-br);
-            transition: all 1s ease-in-out;
+            transition: all .51s ease-out;
         }
 
         .toggle-btn {
