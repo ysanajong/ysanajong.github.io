@@ -5,19 +5,23 @@ permalink: /books/
 ---
 #### Currently Reading
 
-![Never Split The Difference](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1490567231l/30736658._SY475_.jpg)
-![12 Rules of Life - Jordan Peterson](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1512705866l/30257963.jpg)
+![The 4-Hour workweek by Timothy Ferriss](https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1442957271i/368593.jpg)
+
 
 #### Books I've read.
+- Never Split the Difference by Chris Voss
 - 7 Habbits of highly effective people by Steven Covey
+- Thomas Erikson - Surrounded by Bad Bosses and Lazy Employees 
+- 12 rules of life by Jordan Peterson
+- Wraak (NL) by Wouter Laumans, Marijn Schrijver
+- Mocro Maffia (NL) by Wouter Laumans, Marijn Schrijver
+- Peter Gillis: Massa is Kassa (NL)
+- The Power of Habit by Charles Duhigg
+- Start with Why - Simon Sinek
 - Surrounded by Psychopaths by Thomas Erikson
 - Surrounded by Idiots By Thomas Erikson
-- 12 rules of life by Jordan Peterson
-- Permanent Record by Edward Snowden
-- The Art of Thinking Clearly by Rolf Dobelli
+- Keduampon - Kenneth Vers Babel (NL)
+- Winti Academia - Kenneth Vers Babel (NL)
 - The Subtle Art of Not Giving A F*ck by Mark Manson
-- Charles Duhigg - The Power of Habit
-- Thomas Erikson - Surrounded by Bad Bosses and Lazy Employees 
-- Winti Academia - Kenneth Babel Vers (NL)
-- Peter Gillis: massa is kassa (NL)
-- Start with Why - Simon Sinek
+- The Art of Thinking Clearly by Rolf Dobelli
+- Permanent Record by Edward Snowden
