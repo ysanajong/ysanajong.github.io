@@ -11,9 +11,11 @@
   --btn-br-light: hsla(113, 7%, 54%, 0.809);
   --btn-br-dark: hsla(240, 7%, 54%, 0.43);
 
-  --btn-bg-light: hsl(0, 83%, 32%);
-  --btn-bg-dark: hsl(212, 53%, 47%);
+  --btn-bg-light: hsl(214, 76%, 53%);
+  --btn-bg-dark: hsl(214, 76%, 53%);
+  
   --btn-hover: hsla(212, 82%, 48%, 0.743);
+  --btn-bg-hover: hsla(212, 82%, 48%, 0.273);
 
   --t-delay: 1s;
 }
@@ -23,7 +25,7 @@
     color-scheme: light;
     --text-color: var(--text-color-light);
     --background-color: var(--background-light);
-    --brand-color: #2a7ae2;
+    --brand-color: hsl(214, 76%, 53%);
     --grey-color: #828282;
     --grey-color-light: lighten (var(--grey-color), 40%);
     --grey-color-dark: darken (var(--grey-color), 25%);
