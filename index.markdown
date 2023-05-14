@@ -5,5 +5,8 @@
 layout: home
 ---
 
+Currently reading
+
 ![Surrounded by narcissists by Thomas Erikson](https://www.bbrief.co.za/content/uploads/2022/07/Surrounded-by-Narcissists.png)
+
 [View more]({{site.baseurl}}/books)
