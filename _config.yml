@@ -1,9 +1,10 @@
 title: Yannick San-A-Jong
-email: yannick@sanajong.net
+email: yannick@sanajo.ng
 description: >- # this means to ignore newlines until "baseurl:"
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://yannicksanajong.nl" # the base hostname & protocol for your site, e.g. http://example.com
 twitter: yannicksanajong
 github:  ysanajong
 linkedin: yannicksanajong
@@ -28,7 +29,6 @@ kramdown:
 #
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
-#
 
 exclude:
   - .sass-cache/

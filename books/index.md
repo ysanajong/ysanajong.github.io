@@ -5,8 +5,7 @@ permalink: /books/
 ---
 #### Currently Reading
 
-![Surrounded by Setbacks by Thomas Erikson](https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1626722074l/56269009.jpg)
-
+![Surrounded by narcissists by Thomas Erikson](https://www.bbrief.co.za/content/uploads/2022/07/Surrounded-by-Narcissists.png)
 
 #### Books I've read.
 - 12 rules of life by Jordan Peterson
