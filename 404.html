@@ -2,7 +2,6 @@
 permalink: /404.html
 layout: default
 ---
-
 <style type="text/css" media="screen">
   .container {
     margin: 10px auto;
@@ -15,44 +14,30 @@ layout: default
     line-height: 1;
     letter-spacing: -1px;
   }
-
   .details {
     font: 0.7em sans-serif;
   }
 </style>
 
-
 <div class="container">
   <h1>404</h1>
-
   <p><strong>Page not found :(</strong></p>
   <p>The requested page could not be found.</p>
-
-
   <iframe src="https://gadgets.buienradar.nl/gadget/zoommap/?lat=52.37403&lng=4.88969&overname=2&zoom=11&naam=Amsterdam &size=3&voor=1" scrolling=no width=550 height=512 frameborder=no></iframe>
   <div class="details">
     <p>      
-      User Agent:
-      <span id="ua"></span>
-      OS:
-      <span id="platform"> </span>
-      cookieEnabled:
-      <span id="cookieEnabled"> </span>
-      Languages:
-      <span id="languages"> </span>
-      Language:
-      <span id="language"> </span>
-      Plaform:
-      <span id="platform"> </span>
-      Vendor:
-      <span id="vendor"> </span>
-      Your IP Address:
-      <span id="ip"> </span>
+      User Agent: <span id="ua"></span>
+      OS: <span id="platform"> </span>
+      CookieEnabled: <span id="cookieEnabled"> </span>
+      Languages: <span id="languages"> </span>
+      Plaform: <span id="platform"> </span>
+      Vendor: <span id="vendor"> </span>
+      Your IP Address: <span id="ip"> </span>
     </p>
   </div>
 
 </div>
-<script >
+<script>
   const api_url = 'https://api.ipify.org/?format=json';
   async function getIP() {
     const response = await fetch(api_url);
@@ -66,6 +51,5 @@ layout: default
   document.getElementById("language").innerHTML = navigator.language;
   document.getElementById("languages").innerHTML = navigator.languages;
   document.getElementById("vendor").innerHTML = navigator.vendor;
-  
   getIP();
-  </script>
+</script>
