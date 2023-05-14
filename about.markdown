@@ -4,12 +4,11 @@ title: About Yannick
 permalink: /about/
 ---
 
-Yannick is a system and process engineer currently working at NTT ltd. In the past Yannick has worked for all the big internet providers in his home country the Netherlands.
-
+Yannick is an experienced network professional with over fitheen years of industry experience in internetworking and network-security. With a proven track record of success in [specific skills/achievements], they have demonstrated exceptional leadership abilities, successfully managing and motivating teams to deliver high-quality results.
 
 ### Contact me
 
-[yannick@sanajong.net](mailto:yannick@sanajong.net)
+[yannick@sanajo.ng](mailto:yannick@sanajo.ng)
 
 #### SSH Keys
 
