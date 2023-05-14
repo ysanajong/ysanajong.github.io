@@ -4,7 +4,7 @@ title: About Yannick
 permalink: /about/
 ---
 
-Yannick is an experienced network professional with over fitheen years of industry experience in internetworking and network-security. With a proven track record of success in [specific skills/achievements], they have demonstrated exceptional leadership abilities, successfully managing and motivating teams to deliver high-quality results.
+Yannick is an experienced network professional with over fitheen years of industry experience in internetworking and network-security.
 
 ### Contact me
 
