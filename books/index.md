@@ -8,6 +8,7 @@ permalink: /books/
 ![Surrounded by narcissists by Thomas Erikson](https://www.bbrief.co.za/content/uploads/2022/07/Surrounded-by-Narcissists.png)
 
 #### Books I've read.
+- Surrounded by setbacks by Thomas Erikson
 - 12 rules of life by Jordan Peterson
 - Never Split the Difference by Chris Voss
 - 7 Habbits of highly effective people by Steven Covey
